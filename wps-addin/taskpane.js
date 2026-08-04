@@ -60,10 +60,11 @@ function renderIssues(issues) {
     card.dataset.issueId = issue.id;
     card.querySelector('[data-field="source"]').textContent = issue.sourceLabel;
     card.querySelector('[data-field="type"]').textContent = issue.typeLabel;
+    card.querySelector('[data-field="rules"]').textContent = `${issue.ruleVersion || "法学引注手册"} · 规则 ${issue.ruleIds?.join("、") || "G05、G08"}`;
     card.querySelector('[data-field="original"]').textContent = issue.original;
     card.querySelector('[data-field="suggestion"]').textContent = issue.suggestion;
     const reasons = card.querySelector('[data-field="reasons"]');
-    for (const reason of [...issue.reasons, ...issue.warnings]) {
+    for (const reason of [...issue.reasons, ...issue.warnings, ...(issue.findings || []).map((finding) => `${finding.ruleId}：${finding.message}`)]) {
       const item = document.createElement("li");
       item.textContent = reason;
       reasons.append(item);

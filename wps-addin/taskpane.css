@@ -21,6 +21,7 @@ button { font: inherit; cursor: pointer; }
 .scope-card { padding: 16px; }
 .scope-card h1 { margin: 0 0 5px; font-size: 17px; }
 .scope-card > p { margin: 0; color: var(--muted); font-size: 12px; }
+.scope-card .rule-status { margin-top: 6px; color: var(--brand); font-size: 11px; }
 .scope-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 14px; }
 .scope-actions button, .issue-actions button { min-height: 36px; border: 1px solid var(--line); border-radius: 9px; background: white; color: var(--ink); }
 .scope-actions button:last-child { grid-column: 1 / -1; }
@@ -39,6 +40,7 @@ button { font: inherit; cursor: pointer; }
 .issue-card { padding: 14px; }
 .issue-meta { display: flex; justify-content: space-between; gap: 8px; margin-bottom: 11px; color: var(--muted); font-size: 12px; }
 .issue-meta span:last-child { color: var(--brand); }
+.rule-reference { margin: -3px 0 10px; color: var(--muted); font-size: 10px; }
 .text-block { padding: 10px 11px; border-radius: 9px; }
 .text-block + .text-block { margin-top: 8px; }
 .text-block label { display: block; margin-bottom: 4px; color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: .08em; }
