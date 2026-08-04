@@ -1,0 +1,13 @@
+{
+  "name": "citation-cn-wps-addin",
+  "version": "0.1.0",
+  "private": true,
+  "description": "法引 · Citation CN 的 WPS 文字加载项",
+  "type": "module",
+  "scripts": {
+    "sync-core": "node ../scripts/sync-wps-core.mjs",
+    "debug": "npm run sync-core && wpsjs debug",
+    "build": "npm run sync-core && wpsjs build",
+    "publish": "npm run sync-core && wpsjs publish"
+  }
+}

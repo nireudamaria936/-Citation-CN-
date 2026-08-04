@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>法引检查</title>
+    <link rel="stylesheet" href="taskpane.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="app-header">
+        <div class="brand-mark">法</div>
+        <div>
+          <strong>法引检查</strong>
+          <p>依据《法学引注手册》（2019）</p>
+        </div>
+      </header>
+
+      <section class="scope-card">
+        <h1>检查文档中的引注</h1>
+        <p>检查结果只提供格式建议，不核验文献真伪、版本或页码来源。</p>
+        <div class="scope-actions">
+          <button class="primary" data-action="scan-selection">检查选区</button>
+          <button data-action="scan-document">检查全文</button>
+          <button data-action="scan-notes">检查脚注与尾注</button>
+        </div>
+        <label class="revision-option">
+          <input id="track-revisions" type="checkbox" checked />
+          应用建议时开启修订
+        </label>
+      </section>
+
+      <section class="summary" aria-live="polite">
+        <span id="status-dot" class="status-dot"></span>
+        <p id="status-text">请选择检查范围。</p>
+      </section>
+
+      <section id="results" class="results" aria-label="检查结果">
+        <div class="empty-state">
+          <span>引</span>
+          <p>问题会显示在这里；每条建议均由你决定是否添加或替换。</p>
+        </div>
+      </section>
+    </main>
+    <template id="issue-template">
+      <article class="issue-card">
+        <div class="issue-meta">
+          <span data-field="source"></span>
+          <span data-field="type"></span>
+        </div>
+        <div class="text-block original-block">
+          <label>原文</label>
+          <p data-field="original"></p>
+        </div>
+        <div class="text-block suggestion-block">
+          <label>建议格式</label>
+          <p data-field="suggestion"></p>
+        </div>
+        <ul data-field="reasons" class="reasons"></ul>
+        <div class="issue-actions">
+          <button data-action="locate">定位</button>
+          <button data-action="comment">添加批注</button>
+          <button data-action="copy">复制建议</button>
+          <button class="apply" data-action="replace">应用建议</button>
+        </div>
+      </article>
+    </template>
+    <script type="module" src="taskpane.js"></script>
+  </body>
+</html>

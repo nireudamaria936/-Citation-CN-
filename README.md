@@ -6,6 +6,11 @@
 
 Citation CN is an open-source citation converter for legal writers, editors, and researchers. It transforms GB/T 7714, BibTeX, and RIS records into formats based on the 2019 *Chinese Legal Citation Manual*. The browser-only workflow supports major Chinese and English legal sources, field review, live preview, and one-click copying without uploading citation data.
 
+## 项目地址 · Project Links
+
+- GitHub：[nireudamaria936/-Citation-CN-](https://github.com/nireudamaria936/-Citation-CN-)
+- 问题反馈：[GitHub Issues](https://github.com/nireudamaria936/-Citation-CN-/issues)
+
 ## 功能
 
 - 批量识别 GB/T 7714 常见文本、BibTeX、RIS
@@ -51,6 +56,18 @@ npm run export:pages
 ```
 
 静态文件会输出到 `gh-pages-dist/`（已加入 `.gitignore`）。
+
+## WPS 文字加载项
+
+仓库中的 `wps-addin/` 提供“法引检查”第一版，可检查 WPS 文档选区、全文、脚注和尾注，并将规范格式建议添加为批注，或在用户确认后以修订方式替换原文。
+
+```bash
+npm run wps:check
+cd wps-addin
+npm run debug
+```
+
+详细说明见 [`wps-addin/README.md`](wps-addin/README.md)。WPS 官方当前明确适配 Windows、Linux；macOS 需要先验证本机 WPS 是否支持 JavaScript 加载项。
 
 ## 支持范围与路线图
 

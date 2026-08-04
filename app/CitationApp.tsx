@@ -145,7 +145,7 @@ export default function CitationApp() {
           <a href="#converter">批量转换</a>
           <a href="#precise-editor">精准录入</a>
           <a href="#rules">规则说明</a>
-          <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://github.com/nireudamaria936/-Citation-CN-" target="_blank" rel="noreferrer">GitHub</a>
         </nav>
       </header>
 
@@ -262,4 +262,3 @@ export default function CitationApp() {
     </main>
   );
 }
-

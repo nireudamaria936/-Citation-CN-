@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" onLoad="OnAddInLoad">
+  <ribbon startFromScratch="false">
+    <tabs>
+      <tab id="CitationCNTab" label="法引">
+        <group id="CitationCNReviewGroup" label="引注检查">
+          <button id="CitationCNOpenPane"
+                  label="打开法引检查"
+                  size="large"
+                  onAction="OpenCitationPane"
+                  screentip="检查选区、全文、脚注与尾注中的法学引注" />
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>
